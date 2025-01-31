@@ -19,6 +19,7 @@
 - **_Chrome, [here](https://github.com/Anghkooey/student/raw/main/firefox.user.js) to install the userscript._**
 - **_Firefox, [here](https://github.com/Anghkooey/student/raw/main/exam.user.js) to install the userscript._**
 - **_AI, [here](https://github.com/Anghkooey/student/raw/main/ai.user.js) to install the userscript._**
+- **_Parser, [here](https://github.com/Anghkooey/student/raw/main/parser.user.js) to install the userscript._**
 
 #### 2. **_Add the Script to Tampermonkey_**  
 
