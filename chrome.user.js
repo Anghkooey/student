@@ -1,0 +1,11 @@
+// ==UserScript==
+// @name          Chrome
+// @author        https://github.com/Anghkooey/
+// @namespace     https://github.com/Anghkooey/student
+// @version       2.0
+// @include       https://platforma.uafm.edu.pl/*
+// @run-at        document-start
+// @description   none
+// ==/UserScript==
+
+(()=>{const e=window.requestAnimationFrame,t=window.setTimeout,n=window.setInterval,o=performance.now.bind(performance);Date.now;Object.defineProperty(document,"visibilityState",{get:()=>"visible"}),Object.defineProperty(document,"webkitVisibilityState",{get:()=>"visible"}),Object.defineProperty(document,"hidden",{get:()=>!1}),document.onvisibilitychange=null,unsafeWindow.onblur=null,unsafeWindow.onfocus=null,unsafeWindow.document.hasFocus=()=>!0,Object.defineProperty(document,"fullscreenElement",{get:()=>document.documentElement}),Object.defineProperty(document,"fullscreenEnabled",{get:()=>!0}),Object.defineProperty(document,"webkitFullscreenElement",{get:()=>document.documentElement}),Object.defineProperty(document,"mozFullScreenElement",{get:()=>document.documentElement}),Object.defineProperty(document,"msFullscreenElement",{get:()=>document.documentElement}),Object.defineProperty(window,"innerWidth",{get:()=>screen.width}),Object.defineProperty(window,"innerHeight",{get:()=>screen.height}),window.requestAnimationFrame=t=>e((()=>t(o()))),window.setTimeout=(e,n)=>t((()=>e()),Math.max(0,n)),window.setInterval=(e,t)=>n((()=>e()),Math.max(0,t)),setInterval((()=>{document.dispatchEvent(new MouseEvent("mousemove",{bubbles:!0})),document.dispatchEvent(new KeyboardEvent("keydown",{key:"a",bubbles:!0}))}),1e4);const i=new Set(["visibilitychange","webkitvisibilitychange","blur","focus","fullscreenchange","fullscreenerror"]),d=EventTarget.prototype.addEventListener;EventTarget.prototype.addEventListener=function(e,t,n){i.has(e)||d.call(this,e,t,n)},i.forEach((e=>{document.addEventListener(e,(e=>{e.stopImmediatePropagation(),e.preventDefault()}),!0)}))})(),(()=>{const e=()=>{document.querySelectorAll(".eminus_test_question h3.eminus_test_question_details.noselect").forEach((e=>{e.classList.remove("noselect"),e.style.userSelect="text"}))},t=()=>{new MutationObserver(e).observe(document,{childList:!0,subtree:!0}),e()};"loading"===document.readyState?document.addEventListener("DOMContentLoaded",t):t()})();
